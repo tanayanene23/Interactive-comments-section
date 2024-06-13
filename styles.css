@@ -1,0 +1,325 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: hsl(228, 33%, 97%);
+    font-family: 'Rubik', sans-serif;
+}
+
+p{
+    font-size: 16px;
+    color: hsl(211, 10%, 45%);
+}
+
+.comments-list{
+    width: 50vw;
+    /* position: absolute; */
+    /* left: 30vw;*/
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    margin: auto;
+
+}
+
+.user-comments{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 1em;
+}
+
+.other-users{
+    padding: 1em;
+    display: flex;
+    gap: 2em;
+    border-radius: 0.5em;
+    background-color: white;
+}
+
+/* scores */
+
+.left{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 5em;
+    padding: 0.5em;
+    border-radius: 0.5em;
+}
+
+.left p{
+    color: hsl(238, 40%, 52%);
+    font-weight: 500;
+}
+
+.left img{
+    cursor: pointer;
+}
+
+
+.right{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    background-color: white;
+    width: 35em;
+}
+
+.top{
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+}
+
+.top-left{
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    background-color: white;
+}
+
+.top-left img{
+    height: 2em;
+    width: 2em;
+    background-color: white;
+}
+
+.top-left p{
+    background-color: white;
+}
+
+.top-right{
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    background-color: white;
+    cursor: pointer;
+}
+
+
+.top-right p{
+    background-color: white;
+}
+
+.top-right img{
+    height: 1em;
+    width: 1em;
+    background-color: white;
+}
+
+.bottom p{
+    background-color: white;
+}
+
+
+#tagging{
+    color: blue;
+    background-color: white;
+}
+
+span{
+    background-color: white;
+}
+
+/* new comment by current user */
+
+textarea{
+    resize: none;
+    height: 5em;
+    width: 33em;
+    border-radius: 0.5em;
+    border-color: hsl(238, 40%, 52%);
+    background-color: white;
+    padding: 1em;
+    overflow: hidden;
+    cursor: pointer;
+} 
+
+
+
+.new-comment{
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+    background-color: white;
+    border-radius: 0.5em;
+}
+
+.new-comment img{
+    height: 2em;
+    width: 2em;
+}
+
+button{
+    background-color: hsl(238, 40%, 52%);
+    height: 2.5em;
+    width: 5em;
+    border-radius: 0.5em;
+    border: none;
+    /* font-weight: 500; */
+    color: white;
+    cursor: pointer;
+}
+
+
+/* current user reply */
+
+.delete{
+    background-color: white;
+    display: flex;
+    gap: 0.3em;
+}
+.delete p{
+    color: hsl(358, 79%, 66%);
+}
+
+.edit{
+    background-color: white;
+    display: flex;
+    gap: 0.3em; 
+}
+
+.edit p{
+    color: hsl(238, 40%, 52%);
+}
+
+#you{
+    background-color: hsl(238, 40%, 52%);
+    border-radius: 0.2em;
+    padding: 0.1em 0.4em;
+    font-size: 0.8em;
+    font-weight: 500;
+    color: white;
+}
+
+#send{
+    cursor: pointer;
+}
+
+#send-reply{
+    cursor: pointer;
+}
+
+/* actions - delete and edit */
+.actions{
+    background-color: white;
+    display: flex;
+    gap: 1em;
+}
+
+
+.other-replies #new-reply{
+    width: 28em;
+}
+
+.replies-container{
+    border-left: 0.2em solid hsl(223, 19%, 93%);
+    display: flex;
+    /* flex-direction: column; */
+    gap: 3em;
+}
+
+.reply-section{
+    background-color: white;
+    display: flex;
+    gap: 0.5em;
+}
+
+
+.other-users{
+    width: 40em;
+}
+
+.other-replies{
+    width: 35em;
+}
+
+.new-comment{
+    width: 40em;
+}
+
+.all-user-comments{
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    align-items: center;
+}
+
+/* delete popup */
+
+.delete-popup{
+    width: 22em;
+    background-color: white;
+    padding: 2em;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    border-radius: 0.5em;
+
+    position: fixed;
+    top: 30%;
+    left: 40%;
+    display: none;
+    backdrop-filter: blur(10em);
+}
+
+.delete-popup p{
+    background-color: white;
+}
+
+.delete-popup h3{
+    background-color: white;
+}
+
+.delete-popup button{
+    width: 10em;
+}
+
+.delete-buttons{
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+#yes{
+    background-color: hsl(358, 79%, 66%);
+    cursor: pointer;
+}
+
+#no{
+    background-color: grey;
+    cursor: pointer;
+}
+
+/* .container{
+    filter: brightness(0.5);
+} */
+
+/* body{
+    filter: brightness(0.5);
+} */
+
+
+/* for edit section */
+
+.other-users #edit-comment{
+    width: 40em;
+}
+
+.other-replies #edit-comment{
+    width: 35em;
+}
+
+.other-users #update{
+    margin-left: 35em;
+}
+
+.other-replies #update{
+    margin-left: 30em;
+}
+
